@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Connecte.Modele
+{
+    public class Personne
+    {
+        private int id;
+        private string nom;
+        private string prenom;
+        private string tel;
+        private string mail;
+        private string adresse;
+
+        public int Id { get => id; set => id = value; }
+        public string Nom { get => nom; set => nom = value; }
+        public string Prenom { get => prenom; set => prenom = value; }
+        public string Tel { get => tel; set => tel = value; }
+        public string Mail { get => mail; set => mail = value; }
+
+        public string Adresse { get => adresse; set => adresse = value; }
+        public Personne(int unId, string unNom, string unPrenom, string unTel, string unMail, string uneAdresse)
+        {
+            this.id = unId;
+            this.nom = unNom;
+            this.prenom = unPrenom;
+            this.tel = unTel;
+            this.mail = unMail;
+            this.adresse = uneAdresse;
+        }
+
+        public virtual string Description
+        {
+            get => " Id : " + this.id + " Nom : " + this.nom + " Prenom : " + this.Prenom + " Téléphone : " + this.tel + " mail : " + this.mail;
+        }
+
+    }
+
+}
